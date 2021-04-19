@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_dimen"
+        android:layout_marginLeft="@dimen/default_dimen"
+        android:layout_marginTop="@dimen/default_dimen"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Track Name, Song etc"
+        android:textColor="@color/dark_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_dimen"
+        android:background="@drawable/bg_gray_reactangle"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/searchEDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/half_dimen"
+            android:layout_marginLeft="@dimen/half_dimen"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:fontFamily="@font/montserrat"
+            android:hint="Enter KeyWord"
+            android:padding="@dimen/dimen_15"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_dimen"
+        android:layout_marginLeft="@dimen/default_dimen"
+        android:layout_marginEnd="@dimen/default_dimen"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dimen_20">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Media"
+                android:textColor="@color/dark_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_reactangle"
+                android:padding="@dimen/dimen_15">
+
+                <Spinner
+                    android:id="@+id/mediaSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Spinner" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Country"
+                android:textColor="@color/dark_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_reactangle"
+                android:padding="@dimen/dimen_15">
+
+                <Spinner
+                    android:id="@+id/countrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Spinner"
+                     />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/searchBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        android:fontFamily="@font/montserrat"
+        android:padding="@dimen/default_dimen"
+        android:text="Search" />
+
+    <TextView
+        android:id="@+id/totalTXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/half_dimen"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artistRV"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/resultVIEW"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp"
+            android:text="No result can be found" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

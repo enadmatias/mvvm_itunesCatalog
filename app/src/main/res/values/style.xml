@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+      <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/headingMedium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
